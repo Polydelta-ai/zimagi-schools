@@ -18,12 +18,18 @@ _college_scorecard_import: &college_scorecard_import
                     validators:
                         string:
                             empty: false
+                zipcode:
+                    column: "school.zip"
+                    validators:
+                        string:
+                            empty: false
                 url:
                     column: "school.school_url"
                 main_campus:
                     column: "school.main_campus"
                 ownership:
                     column: "school.ownership"
+                    formatter: college_scorecard_ownership_label
         school_year:
             requires: [school]
             relations:
@@ -115,29 +121,29 @@ _college_scorecard_import: &college_scorecard_import
                     column: "academics.program_percentage.business_marketing"
                 program_percent_history:
                     column: "academics.program_percentage.history"
-                student_ethnicity_white:
+                student_ethnicity_percent_white:
                     column: "student.demographics.race_ethnicity.white"
-                student_ethnicity_black:
+                student_ethnicity_percent_black:
                     column: "student.demographics.race_ethnicity.black"
-                student_ethnicity_hispanic:
+                student_ethnicity_percent_hispanic:
                     column: "student.demographics.race_ethnicity.hispanic"
-                student_ethnicity_asian:
+                student_ethnicity_percent_asian:
                     column: "student.demographics.race_ethnicity.asian"
-                student_ethnicity_aian:
+                student_ethnicity_percent_aian:
                     column: "student.demographics.race_ethnicity.aian"
-                student_ethnicity_nhpi:
+                student_ethnicity_percent_nhpi:
                     column: "student.demographics.race_ethnicity.nhpi"
-                student_ethnicity_two_or_more:
+                student_ethnicity_percent_two_or_more:
                     column: "student.demographics.race_ethnicity.two_or_more"
-                student_ethnicity_non_resident_alien:
+                student_ethnicity_percent_non_resident_alien:
                     column: "student.demographics.race_ethnicity.non_resident_alien"
-                student_ethnicity_unknown:
+                student_ethnicity_percent_unknown:
                     column: "student.demographics.race_ethnicity.unknown"
-                student_ethnicity_white_non_hispanic:
+                student_ethnicity_percent_white_non_hispanic:
                     column: "student.demographics.race_ethnicity.white_non_hispanic"
-                student_ethnicity_black_non_hispanic:
+                student_ethnicity_percent_black_non_hispanic:
                     column: "student.demographics.race_ethnicity.black_non_hispanic"
-                student_ethnicity_asian_pacific_islander:
+                student_ethnicity_percent_asian_pacific_islander:
                     column: "student.demographics.race_ethnicity.asian_pacific_islander"
 
 import:
