@@ -1,0 +1,81 @@
+data_mixins:
+  school:
+    class: SchoolMixin
+    fields:
+      school:
+        type: '@django.ForeignKey'
+        relation: school
+        options:
+          'null': true
+          on_delete: '@django.PROTECT'
+          editable: false
+  schools:
+    class: SchoolMultipleMixin
+    fields:
+      schools:
+        type: '@django.ManyToManyField'
+        relation: school
+data_base:
+  school:
+    class: SchoolBase
+    base: id_resource
+    mixins:
+    - school
+    id_fields:
+    - school_id
+    - name
+    meta:
+      unique_together:
+      - school
+      - name
+      scope: school
+data:
+  school:
+    class: School
+    extend: organization
+    roles:
+      edit:
+      - organization-admin
+      - school-admin
+      view: public
+    fields:
+      url:
+        type: '@django.URLField'
+        options:
+          'null': true
+          default: null
+          max_length: 256
+      ownership:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      main_campus:
+        type: '@django.BooleanField'
+        options:
+          'null': true
+          default: null
+    meta:
+      unique_together: []
+command_mixins:
+  school:
+    class: SchoolMixin
+    mixins: organization
+    meta:
+      school:
+        data: school
+        priority: 5
+command_base:
+  school:
+    mixins:
+    - school
+    server_enabled: true
+    groups_allowed:
+    - organization-admin
+    - school-admin
+command:
+  school:
+    resource: school
+    base: school
+    base_name: school
+    priority: 60
