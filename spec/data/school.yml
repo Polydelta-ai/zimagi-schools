@@ -46,10 +46,11 @@ data:
           default: null
           max_length: 256
       ownership:
-        type: '@django.IntegerField'
+        type: '@django.CharField'
         options:
           'null': true
           default: null
+          max_length: 256
       main_campus:
         type: '@django.BooleanField'
         options:

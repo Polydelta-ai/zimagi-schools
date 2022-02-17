@@ -249,63 +249,313 @@ data:
         options:
           'null': true
           default: null
-      student_ethnicity_black:
+      program_enrollment_agriculture:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_resources:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_architecture:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_ethnic_cultural_gender:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_communication:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_communications_technology:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_computer:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_personal_culinary:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_education:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_engineering:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_engineering_technology:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_language:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_family_consumer_science:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_legal:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_english:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_humanities:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_library:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_biological:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_mathematics:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_military:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_multidiscipline:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_parks_recreation_fitness:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_philosophy_religious:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_theology_religious_vocation:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_physical_science:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_science_technology:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_psychology:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_security_law_enforcement:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_public_administration_social_service:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_social_science:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_construction:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_mechanic_repair_technology:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_precision_production:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_transportation:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_visual_performing:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_health:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_business_marketing:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      program_enrollment_history:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      student_ethnicity_percent_black:
         type: '@django.FloatField'
         options:
           'null': true
           default: null
-      student_ethnicity_hispanic:
+      student_ethnicity_percent_hispanic:
         type: '@django.FloatField'
         options:
           'null': true
           default: null
-      student_ethnicity_asian:
+      student_ethnicity_percent_asian:
         type: '@django.FloatField'
         options:
           'null': true
           default: null
-      student_ethnicity_white:
+      student_ethnicity_percent_white:
         type: '@django.FloatField'
         options:
           'null': true
           default: null
-      student_ethnicity_aian:
+      student_ethnicity_percent_aian:
         type: '@django.FloatField'
         options:
           'null': true
           default: null
-      student_ethnicity_nhpi:
+      student_ethnicity_percent_nhpi:
         type: '@django.FloatField'
         options:
           'null': true
           default: null
-      student_ethnicity_two_or_more:
+      student_ethnicity_percent_two_or_more:
         type: '@django.FloatField'
         options:
           'null': true
           default: null
-      student_ethnicity_non_resident_alien:
+      student_ethnicity_percent_non_resident_alien:
         type: '@django.FloatField'
         options:
           'null': true
           default: null
-      student_ethnicity_unknown:
+      student_ethnicity_percent_unknown:
         type: '@django.FloatField'
         options:
           'null': true
           default: null
-      student_ethnicity_white_non_hispanic:
+      student_ethnicity_percent_white_non_hispanic:
         type: '@django.FloatField'
         options:
           'null': true
           default: null
-      student_ethnicity_black_non_hispanic:
+      student_ethnicity_percent_black_non_hispanic:
         type: '@django.FloatField'
         options:
           'null': true
           default: null
-      student_ethnicity_asian_pacific_islander:
+      student_ethnicity_percent_asian_pacific_islander:
         type: '@django.FloatField'
+        options:
+          'null': true
+          default: null
+      student_ethnicity_enrollment_black:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      student_ethnicity_enrollment_hispanic:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      student_ethnicity_enrollment_asian:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      student_ethnicity_enrollment_white:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      student_ethnicity_enrollment_aian:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      student_ethnicity_enrollment_nhpi:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      student_ethnicity_enrollment_two_or_more:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      student_ethnicity_enrollment_non_resident_alien:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      student_ethnicity_enrollment_unknown:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      student_ethnicity_enrollment_white_non_hispanic:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      student_ethnicity_enrollment_black_non_hispanic:
+        type: '@django.IntegerField'
+        options:
+          'null': true
+          default: null
+      student_ethnicity_enrollment_asian_pacific_islander:
+        type: '@django.IntegerField'
         options:
           'null': true
           default: null
