@@ -90,6 +90,7 @@ class Provider(BaseProvider('source', 'college_scorecard')):
         while True:
             request_params = "&".join(query_options + [ "page={}".format(page) ])
 
+            self.command.notice("Requesting College Scorecard page: {}".format(page))
             response = requests.get("{}?{}".format(self.base_url, request_params))
             results = response.json()
 
