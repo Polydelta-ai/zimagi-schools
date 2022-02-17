@@ -1,0 +1,147 @@
+_college_scorecard_import: &college_scorecard_import
+    source: college_scorecard
+    data:
+        school:
+            map:
+                name:
+                    column: "school.name"
+                    validators:
+                        string:
+                            empty: false
+                city:
+                    column: "school.city"
+                    validators:
+                        string:
+                            empty: false
+                state:
+                    column: "school.state"
+                    validators:
+                        string:
+                            empty: false
+                url:
+                    column: "school.school_url"
+                main_campus:
+                    column: "school.main_campus"
+                ownership:
+                    column: "school.ownership"
+        school_year:
+            requires: [school]
+            relations:
+                school_id:
+                    data: school
+                    column: "school.name"
+                    key_field: name
+                    required: true
+            map:
+                year:
+                    column: year
+                student_size:
+                    column: "student.size"
+                admissions_rate:
+                    column: "admissions.admission_rate.overall"
+                program_percent_agriculture:
+                    column: "academics.program_percentage.agriculture"
+                program_percent_resources:
+                    column: "academics.program_percentage.resources"
+                program_percent_architecture:
+                    column: "academics.program_percentage.architecture"
+                program_percent_ethnic_cultural_gender:
+                    column: "academics.program_percentage.ethnic_cultural_gender"
+                program_percent_communication:
+                    column: "academics.program_percentage.communication"
+                program_percent_communications_technology:
+                    column: "academics.program_percentage.communications_technology"
+                program_percent_computer:
+                    column: "academics.program_percentage.computer"
+                program_percent_personal_culinary:
+                    column: "academics.program_percentage.personal_culinary"
+                program_percent_education:
+                    column: "academics.program_percentage.education"
+                program_percent_engineering:
+                    column: "academics.program_percentage.engineering"
+                program_percent_engineering_technology:
+                    column: "academics.program_percentage.engineering_technology"
+                program_percent_language:
+                    column: "academics.program_percentage.language"
+                program_percent_family_consumer_science:
+                    column: "academics.program_percentage.family_consumer_science"
+                program_percent_legal:
+                    column: "academics.program_percentage.legal"
+                program_percent_english:
+                    column: "academics.program_percentage.english"
+                program_percent_humanities:
+                    column: "academics.program_percentage.humanities"
+                program_percent_library:
+                    column: "academics.program_percentage.library"
+                program_percent_biological:
+                    column: "academics.program_percentage.biological"
+                program_percent_mathematics:
+                    column: "academics.program_percentage.mathematics"
+                program_percent_military:
+                    column: "academics.program_percentage.military"
+                program_percent_multidiscipline:
+                    column: "academics.program_percentage.multidiscipline"
+                program_percent_parks_recreation_fitness:
+                    column: "academics.program_percentage.parks_recreation_fitness"
+                program_percent_philosophy_religious:
+                    column: "academics.program_percentage.philosophy_religious"
+                program_percent_theology_religious_vocation:
+                    column: "academics.program_percentage.theology_religious_vocation"
+                program_percent_physical_science:
+                    column: "academics.program_percentage.physical_science"
+                program_percent_science_technology:
+                    column: "academics.program_percentage.science_technology"
+                program_percent_psychology:
+                    column: "academics.program_percentage.psychology"
+                program_percent_security_law_enforcement:
+                    column: "academics.program_percentage.security_law_enforcement"
+                program_percent_public_administration_social_service:
+                    column: "academics.program_percentage.public_administration_social_service"
+                program_percent_social_science:
+                    column: "academics.program_percentage.social_science"
+                program_percent_construction:
+                    column: "academics.program_percentage.construction"
+                program_percent_mechanic_repair_technology:
+                    column: "academics.program_percentage.mechanic_repair_technology"
+                program_percent_precision_production:
+                    column: "academics.program_percentage.precision_production"
+                program_percent_transportation:
+                    column: "academics.program_percentage.transportation"
+                program_percent_visual_performing:
+                    column: "academics.program_percentage.visual_performing"
+                program_percent_health:
+                    column: "academics.program_percentage.health"
+                program_percent_business_marketing:
+                    column: "academics.program_percentage.business_marketing"
+                program_percent_history:
+                    column: "academics.program_percentage.history"
+                student_ethnicity_white:
+                    column: "student.demographics.race_ethnicity.white"
+                student_ethnicity_black:
+                    column: "student.demographics.race_ethnicity.black"
+                student_ethnicity_hispanic:
+                    column: "student.demographics.race_ethnicity.hispanic"
+                student_ethnicity_asian:
+                    column: "student.demographics.race_ethnicity.asian"
+                student_ethnicity_aian:
+                    column: "student.demographics.race_ethnicity.aian"
+                student_ethnicity_nhpi:
+                    column: "student.demographics.race_ethnicity.nhpi"
+                student_ethnicity_two_or_more:
+                    column: "student.demographics.race_ethnicity.two_or_more"
+                student_ethnicity_non_resident_alien:
+                    column: "student.demographics.race_ethnicity.non_resident_alien"
+                student_ethnicity_unknown:
+                    column: "student.demographics.race_ethnicity.unknown"
+                student_ethnicity_white_non_hispanic:
+                    column: "student.demographics.race_ethnicity.white_non_hispanic"
+                student_ethnicity_black_non_hispanic:
+                    column: "student.demographics.race_ethnicity.black_non_hispanic"
+                student_ethnicity_asian_pacific_islander:
+                    column: "student.demographics.race_ethnicity.asian_pacific_islander"
+
+import:
+    college_scorecard_2019:
+        <<: *college_scorecard_import
+        tags: [organization, school]
+        year: 2019
