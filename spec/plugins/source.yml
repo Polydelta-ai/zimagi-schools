@@ -1,0 +1,9 @@
+plugin:
+    source:
+        providers:
+            college_scorecard:
+                option:
+                    year:
+                        type: int
+                        default: 2019
+                        help: "School year to query."
