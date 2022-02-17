@@ -9,7 +9,7 @@ pre_run:
             url:
                 type: url
             ownership:
-                type: integer
+                type: string
             main_campus:
                 type: boolean
 
@@ -24,6 +24,7 @@ pre_run:
                 type: integer
             admissions_rate:
                 type: float
+
             program_percent_agriculture:
                 type: float
             program_percent_resources:
@@ -100,30 +101,133 @@ pre_run:
                 type: float
             program_percent_history:
                 type: float
-            student_ethnicity_black:
+
+            program_enrollment_agriculture:
+                type: integer
+            program_enrollment_resources:
+                type: integer
+            program_enrollment_architecture:
+                type: integer
+            program_enrollment_ethnic_cultural_gender:
+                type: integer
+            program_enrollment_communication:
+                type: integer
+            program_enrollment_communications_technology:
+                type: integer
+            program_enrollment_computer:
+                type: integer
+            program_enrollment_personal_culinary:
+                type: integer
+            program_enrollment_education:
+                type: integer
+            program_enrollment_engineering:
+                type: integer
+            program_enrollment_engineering_technology:
+                type: integer
+            program_enrollment_language:
+                type: integer
+            program_enrollment_family_consumer_science:
+                type: integer
+            program_enrollment_legal:
+                type: integer
+            program_enrollment_english:
+                type: integer
+            program_enrollment_humanities:
+                type: integer
+            program_enrollment_library:
+                type: integer
+            program_enrollment_biological:
+                type: integer
+            program_enrollment_mathematics:
+                type: integer
+            program_enrollment_military:
+                type: integer
+            program_enrollment_multidiscipline:
+                type: integer
+            program_enrollment_parks_recreation_fitness:
+                type: integer
+            program_enrollment_philosophy_religious:
+                type: integer
+            program_enrollment_theology_religious_vocation:
+                type: integer
+            program_enrollment_physical_science:
+                type: integer
+            program_enrollment_science_technology:
+                type: integer
+            program_enrollment_psychology:
+                type: integer
+            program_enrollment_security_law_enforcement:
+                type: integer
+            program_enrollment_public_administration_social_service:
+                type: integer
+            program_enrollment_social_science:
+                type: integer
+            program_enrollment_construction:
+                type: integer
+            program_enrollment_mechanic_repair_technology:
+                type: integer
+            program_enrollment_precision_production:
+                type: integer
+            program_enrollment_transportation:
+                type: integer
+            program_enrollment_visual_performing:
+                type: integer
+            program_enrollment_health:
+                type: integer
+            program_enrollment_business_marketing:
+                type: integer
+            program_enrollment_history:
+                type: integer
+
+            student_ethnicity_percent_black:
                 type: float
-            student_ethnicity_hispanic:
+            student_ethnicity_percent_hispanic:
                 type: float
-            student_ethnicity_asian:
+            student_ethnicity_percent_asian:
                 type: float
-            student_ethnicity_white:
+            student_ethnicity_percent_white:
                 type: float
-            student_ethnicity_aian:
+            student_ethnicity_percent_aian:
                 type: float
-            student_ethnicity_nhpi:
+            student_ethnicity_percent_nhpi:
                 type: float
-            student_ethnicity_two_or_more:
+            student_ethnicity_percent_two_or_more:
                 type: float
-            student_ethnicity_non_resident_alien:
+            student_ethnicity_percent_non_resident_alien:
                 type: float
-            student_ethnicity_unknown:
+            student_ethnicity_percent_unknown:
                 type: float
-            student_ethnicity_white_non_hispanic:
+            student_ethnicity_percent_white_non_hispanic:
                 type: float
-            student_ethnicity_black_non_hispanic:
+            student_ethnicity_percent_black_non_hispanic:
                 type: float
-            student_ethnicity_asian_pacific_islander:
+            student_ethnicity_percent_asian_pacific_islander:
                 type: float
+
+            student_ethnicity_enrollment_black:
+                type: integer
+            student_ethnicity_enrollment_hispanic:
+                type: integer
+            student_ethnicity_enrollment_asian:
+                type: integer
+            student_ethnicity_enrollment_white:
+                type: integer
+            student_ethnicity_enrollment_aian:
+                type: integer
+            student_ethnicity_enrollment_nhpi:
+                type: integer
+            student_ethnicity_enrollment_two_or_more:
+                type: integer
+            student_ethnicity_enrollment_non_resident_alien:
+                type: integer
+            student_ethnicity_enrollment_unknown:
+                type: integer
+            student_ethnicity_enrollment_white_non_hispanic:
+                type: integer
+            student_ethnicity_enrollment_black_non_hispanic:
+                type: integer
+            student_ethnicity_enrollment_asian_pacific_islander:
+                type: integer
 
 run:
     admin_role:
