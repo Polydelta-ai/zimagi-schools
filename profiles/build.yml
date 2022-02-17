@@ -1,0 +1,188 @@
+config:
+    module_name: schools
+    data_name: school
+    parent_data_name: organization
+
+pre_run:
+    data_fields:
+        _config:
+            url:
+                type: url
+            ownership:
+                type: integer
+            main_campus:
+                type: boolean
+
+    data_year_name:
+        _config: "@{data_name}_year"
+
+    data_year_fields:
+        _config:
+            year:
+                type: integer
+            student_size:
+                type: integer
+            admissions_rate:
+                type: float
+            program_percent_agriculture:
+                type: float
+            program_percent_resources:
+                type: float
+            program_percent_architecture:
+                type: float
+            program_percent_ethnic_cultural_gender:
+                type: float
+            program_percent_communication:
+                type: float
+            program_percent_communications_technology:
+                type: float
+            program_percent_computer:
+                type: float
+            program_percent_personal_culinary:
+                type: float
+            program_percent_education:
+                type: float
+            program_percent_engineering:
+                type: float
+            program_percent_engineering_technology:
+                type: float
+            program_percent_language:
+                type: float
+            program_percent_family_consumer_science:
+                type: float
+            program_percent_legal:
+                type: float
+            program_percent_english:
+                type: float
+            program_percent_humanities:
+                type: float
+            program_percent_library:
+                type: float
+            program_percent_biological:
+                type: float
+            program_percent_mathematics:
+                type: float
+            program_percent_military:
+                type: float
+            program_percent_multidiscipline:
+                type: float
+            program_percent_parks_recreation_fitness:
+                type: float
+            program_percent_philosophy_religious:
+                type: float
+            program_percent_theology_religious_vocation:
+                type: float
+            program_percent_physical_science:
+                type: float
+            program_percent_science_technology:
+                type: float
+            program_percent_psychology:
+                type: float
+            program_percent_security_law_enforcement:
+                type: float
+            program_percent_public_administration_social_service:
+                type: float
+            program_percent_social_science:
+                type: float
+            program_percent_construction:
+                type: float
+            program_percent_mechanic_repair_technology:
+                type: float
+            program_percent_precision_production:
+                type: float
+            program_percent_transportation:
+                type: float
+            program_percent_visual_performing:
+                type: float
+            program_percent_health:
+                type: float
+            program_percent_business_marketing:
+                type: float
+            program_percent_history:
+                type: float
+            student_ethnicity_black:
+                type: float
+            student_ethnicity_hispanic:
+                type: float
+            student_ethnicity_asian:
+                type: float
+            student_ethnicity_white:
+                type: float
+            student_ethnicity_aian:
+                type: float
+            student_ethnicity_nhpi:
+                type: float
+            student_ethnicity_two_or_more:
+                type: float
+            student_ethnicity_non_resident_alien:
+                type: float
+            student_ethnicity_unknown:
+                type: float
+            student_ethnicity_white_non_hispanic:
+                type: float
+            student_ethnicity_black_non_hispanic:
+                type: float
+            student_ethnicity_asian_pacific_islander:
+                type: float
+
+run:
+    admin_role:
+        _command: template generate
+        module_name: "@module_name"
+        module_template: user/role
+        template_fields:
+            name: "@{data_name}-admin"
+            help: "#capitalize(@data_name) administrator"
+
+    school_model:
+        _command: template generate
+        module_name: "@module_name"
+        module_template: data/model
+        template_fields:
+            name: "@data_name"
+            base: "@parent_data_name"
+            extend: True
+            admin_roles: [ "@{parent_data_name}-admin", "@{data_name}-admin" ]
+            view_roles: public
+            resource_priority: 60
+            command_mixins: "@parent_data_name"
+            mixin_priority: 5
+
+    "<<dict_key>>_school_field":
+        _command: template generate
+        _requires: school_model
+        _foreach: "@data_fields"
+        module_name: "@module_name"
+        module_template: "field/<<type>>"
+        template_fields:
+            data_name: "@data_name"
+            field_name: "<<dict_key>>"
+            "<<options>>":
+
+    school_year_model:
+        _command: template generate
+        _requires: school_model
+        module_name: "@module_name"
+        module_template: data/model
+        template_fields:
+            name: "@data_year_name"
+            base: "@data_name"
+            id_fields: [ "@{data_name}_id", year ]
+            key: year
+            name_field: false
+            admin_roles: [ "@{parent_data_name}-admin", "@{data_name}-admin" ]
+            view_roles: public
+            resource_priority: 65
+            command_mixins: ["@parent_data_name", "@data_name"]
+            mixin_priority: 10
+
+    "<<dict_key>>_field":
+        _command: template generate
+        _requires: school_year_model
+        _foreach: "@data_year_fields"
+        module_name: "@module_name"
+        module_template: "field/<<type>>"
+        template_fields:
+            data_name: "@data_year_name"
+            field_name: "<<dict_key>>"
+            "<<options>>":
