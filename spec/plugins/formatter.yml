@@ -1,0 +1,4 @@
+plugin:
+    formatter:
+        providers:
+            college_scorecard_ownership_label:
