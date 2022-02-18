@@ -1,0 +1,362 @@
+_program_enrollment_calculation: &program_enrollment_calculation
+    tags: [ program_enrollment, school_year, school ]
+    data: school_year
+    calculation: multiplication
+    formatter: integer
+
+_student_ethnicity_calculation: &student_ethnicity_calculation
+    tags: [ student_ethnicity, school_year, school ]
+    data: school_year
+    calculation: multiplication
+    formatter: integer
+
+calculation:
+    school_year_program_enrollment_agriculture:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_agriculture
+        params:
+            a: program_percent_agriculture
+            b: student_size
+
+    school_year_program_enrollment_resources:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_resources
+        params:
+            a: program_percent_resources
+            b: student_size
+
+    school_year_program_enrollment_architecture:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_architecture
+        params:
+            a: program_percent_architecture
+            b: student_size
+
+    school_year_program_enrollment_ethnic_cultural_gender:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_ethnic_cultural_gender
+        params:
+            a: program_percent_ethnic_cultural_gender
+            b: student_size
+
+    school_year_program_enrollment_communication:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_communication
+        params:
+            a: program_percent_communication
+            b: student_size
+
+    school_year_program_enrollment_communications_technology:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_communications_technology
+        params:
+            a: program_percent_communications_technology
+            b: student_size
+
+    school_year_program_enrollment_computer:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_computer
+        params:
+            a: program_percent_computer
+            b: student_size
+
+    school_year_program_enrollment_personal_culinary:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_personal_culinary
+        params:
+            a: program_percent_personal_culinary
+            b: student_size
+
+    school_year_program_enrollment_education:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_education
+        params:
+            a: program_percent_education
+            b: student_size
+
+    school_year_program_enrollment_engineering:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_engineering
+        params:
+            a: program_percent_engineering
+            b: student_size
+
+    school_year_program_enrollment_engineering_technology:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_engineering_technology
+        params:
+            a: program_percent_engineering_technology
+            b: student_size
+
+    school_year_program_enrollment_language:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_language
+        params:
+            a: program_percent_language
+            b: student_size
+
+    school_year_program_enrollment_family_consumer_science:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_family_consumer_science
+        params:
+            a: program_percent_family_consumer_science
+            b: student_size
+
+    school_year_program_enrollment_legal:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_legal
+        params:
+            a: program_percent_legal
+            b: student_size
+
+    school_year_program_enrollment_english:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_english
+        params:
+            a: program_percent_english
+            b: student_size
+
+    school_year_program_enrollment_humanities:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_humanities
+        params:
+            a: program_percent_humanities
+            b: student_size
+
+    school_year_program_enrollment_library:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_library
+        params:
+            a: program_percent_library
+            b: student_size
+
+    school_year_program_enrollment_biological:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_biological
+        params:
+            a: program_percent_biological
+            b: student_size
+
+    school_year_program_enrollment_mathematics:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_mathematics
+        params:
+            a: program_percent_mathematics
+            b: student_size
+
+    school_year_program_enrollment_military:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_military
+        params:
+            a: program_percent_military
+            b: student_size
+
+    school_year_program_enrollment_multidiscipline:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_multidiscipline
+        params:
+            a: program_percent_multidiscipline
+            b: student_size
+
+    school_year_program_enrollment_parks_recreation_fitness:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_parks_recreation_fitness
+        params:
+            a: program_percent_parks_recreation_fitness
+            b: student_size
+
+    school_year_program_enrollment_philosophy_religious:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_philosophy_religious
+        params:
+            a: program_percent_philosophy_religious
+            b: student_size
+
+    school_year_program_enrollment_theology_religious_vocation:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_theology_religious_vocation
+        params:
+            a: program_percent_theology_religious_vocation
+            b: student_size
+
+    school_year_program_enrollment_physical_science:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_physical_science
+        params:
+            a: program_percent_physical_science
+            b: student_size
+
+    school_year_program_enrollment_science_technology:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_science_technology
+        params:
+            a: program_percent_science_technology
+            b: student_size
+
+    school_year_program_enrollment_psychology:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_psychology
+        params:
+            a: program_percent_psychology
+            b: student_size
+
+    school_year_program_enrollment_security_law_enforcement:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_security_law_enforcement
+        params:
+            a: program_percent_security_law_enforcement
+            b: student_size
+
+    school_year_program_enrollment_public_administration_social_service:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_public_administration_social_service
+        params:
+            a: program_percent_public_administration_social_service
+            b: student_size
+
+    school_year_program_enrollment_social_science:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_social_science
+        params:
+            a: program_percent_social_science
+            b: student_size
+
+    school_year_program_enrollment_construction:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_construction
+        params:
+            a: program_percent_construction
+            b: student_size
+
+    school_year_program_enrollment_mechanic_repair_technology:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_mechanic_repair_technology
+        params:
+            a: program_percent_mechanic_repair_technology
+            b: student_size
+
+    school_year_program_enrollment_precision_production:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_precision_production
+        params:
+            a: program_percent_precision_production
+            b: student_size
+
+    school_year_program_enrollment_transportation:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_transportation
+        params:
+            a: program_percent_transportation
+            b: student_size
+
+    school_year_program_enrollment_visual_performing:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_visual_performing
+        params:
+            a: program_percent_visual_performing
+            b: student_size
+
+    school_year_program_enrollment_health:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_health
+        params:
+            a: program_percent_health
+            b: student_size
+
+    school_year_program_enrollment_business_marketing:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_business_marketing
+        params:
+            a: program_percent_business_marketing
+            b: student_size
+
+    school_year_program_enrollment_history:
+        <<: *program_enrollment_calculation
+        field: program_enrollment_history
+        params:
+            a: program_percent_history
+            b: student_size
+
+    school_year_student_ethnicity_black:
+        <<: *student_ethnicity_calculation
+        field: student_ethnicity_enrollment_black
+        params:
+            a: student_ethnicity_percent_black
+            b: student_size
+
+    school_year_student_ethnicity_hispanic:
+        <<: *student_ethnicity_calculation
+        field: student_ethnicity_enrollment_hispanic
+        params:
+            a: student_ethnicity_percent_hispanic
+            b: student_size
+
+    school_year_student_ethnicity_asian:
+        <<: *student_ethnicity_calculation
+        field: student_ethnicity_enrollment_asian
+        params:
+            a: student_ethnicity_percent_asian
+            b: student_size
+
+    school_year_student_ethnicity_white:
+        <<: *student_ethnicity_calculation
+        field: student_ethnicity_enrollment_white
+        params:
+            a: student_ethnicity_percent_white
+            b: student_size
+
+    school_year_student_ethnicity_aian:
+        <<: *student_ethnicity_calculation
+        field: student_ethnicity_enrollment_aian
+        params:
+            a: student_ethnicity_percent_aian
+            b: student_size
+
+    school_year_student_ethnicity_nhpi:
+        <<: *student_ethnicity_calculation
+        field: student_ethnicity_enrollment_nhpi
+        params:
+            a: student_ethnicity_percent_nhpi
+            b: student_size
+
+    school_year_student_ethnicity_two_or_more:
+        <<: *student_ethnicity_calculation
+        field: student_ethnicity_enrollment_two_or_more
+        params:
+            a: student_ethnicity_percent_two_or_more
+            b: student_size
+
+    school_year_student_ethnicity_non_resident_alien:
+        <<: *student_ethnicity_calculation
+        field: student_ethnicity_enrollment_non_resident_alien
+        params:
+            a: student_ethnicity_percent_non_resident_alien
+            b: student_size
+
+    school_year_student_ethnicity_unknown:
+        <<: *student_ethnicity_calculation
+        field: student_ethnicity_enrollment_unknown
+        params:
+            a: student_ethnicity_percent_unknown
+            b: student_size
+
+    school_year_student_ethnicity_white_non_hispanic:
+        <<: *student_ethnicity_calculation
+        field: student_ethnicity_enrollment_white_non_hispanic
+        params:
+            a: student_ethnicity_percent_white_non_hispanic
+            b: student_size
+
+    school_year_student_ethnicity_black_non_hispanic:
+        <<: *student_ethnicity_calculation
+        field: student_ethnicity_enrollment_black_non_hispanic
+        params:
+            a: student_ethnicity_percent_black_non_hispanic
+            b: student_size
+
+    school_year_student_ethnicity_asian_pacific_islander:
+        <<: *student_ethnicity_calculation
+        field: student_ethnicity_enrollment_asian_pacific_islander
+        params:
+            a: student_ethnicity_percent_asian_pacific_islander
+            b: student_size
