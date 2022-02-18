@@ -41,110 +41,163 @@ _college_scorecard_import: &college_scorecard_import
             map:
                 year:
                     column: year
+                    formatter: integer
                 student_size:
                     column: "student.size"
+                    formatter: integer
                 admissions_rate:
                     column: "admissions.admission_rate.overall"
+                    formatter: number
                 program_percent_agriculture:
                     column: "academics.program_percentage.agriculture"
+                    formatter: number
                 program_percent_resources:
                     column: "academics.program_percentage.resources"
+                    formatter: number
                 program_percent_architecture:
                     column: "academics.program_percentage.architecture"
+                    formatter: number
                 program_percent_ethnic_cultural_gender:
                     column: "academics.program_percentage.ethnic_cultural_gender"
+                    formatter: number
                 program_percent_communication:
                     column: "academics.program_percentage.communication"
+                    formatter: number
                 program_percent_communications_technology:
                     column: "academics.program_percentage.communications_technology"
+                    formatter: number
                 program_percent_computer:
                     column: "academics.program_percentage.computer"
+                    formatter: number
                 program_percent_personal_culinary:
                     column: "academics.program_percentage.personal_culinary"
+                    formatter: number
                 program_percent_education:
                     column: "academics.program_percentage.education"
+                    formatter: number
                 program_percent_engineering:
                     column: "academics.program_percentage.engineering"
+                    formatter: number
                 program_percent_engineering_technology:
                     column: "academics.program_percentage.engineering_technology"
+                    formatter: number
                 program_percent_language:
                     column: "academics.program_percentage.language"
+                    formatter: number
                 program_percent_family_consumer_science:
                     column: "academics.program_percentage.family_consumer_science"
+                    formatter: number
                 program_percent_legal:
                     column: "academics.program_percentage.legal"
+                    formatter: number
                 program_percent_english:
                     column: "academics.program_percentage.english"
+                    formatter: number
                 program_percent_humanities:
                     column: "academics.program_percentage.humanities"
+                    formatter: number
                 program_percent_library:
                     column: "academics.program_percentage.library"
+                    formatter: number
                 program_percent_biological:
                     column: "academics.program_percentage.biological"
+                    formatter: number
                 program_percent_mathematics:
                     column: "academics.program_percentage.mathematics"
+                    formatter: number
                 program_percent_military:
                     column: "academics.program_percentage.military"
+                    formatter: number
                 program_percent_multidiscipline:
                     column: "academics.program_percentage.multidiscipline"
+                    formatter: number
                 program_percent_parks_recreation_fitness:
                     column: "academics.program_percentage.parks_recreation_fitness"
+                    formatter: number
                 program_percent_philosophy_religious:
                     column: "academics.program_percentage.philosophy_religious"
+                    formatter: number
                 program_percent_theology_religious_vocation:
                     column: "academics.program_percentage.theology_religious_vocation"
+                    formatter: number
                 program_percent_physical_science:
                     column: "academics.program_percentage.physical_science"
+                    formatter: number
                 program_percent_science_technology:
                     column: "academics.program_percentage.science_technology"
+                    formatter: number
                 program_percent_psychology:
                     column: "academics.program_percentage.psychology"
+                    formatter: number
                 program_percent_security_law_enforcement:
                     column: "academics.program_percentage.security_law_enforcement"
+                    formatter: number
                 program_percent_public_administration_social_service:
                     column: "academics.program_percentage.public_administration_social_service"
+                    formatter: number
                 program_percent_social_science:
                     column: "academics.program_percentage.social_science"
+                    formatter: number
                 program_percent_construction:
                     column: "academics.program_percentage.construction"
+                    formatter: number
                 program_percent_mechanic_repair_technology:
                     column: "academics.program_percentage.mechanic_repair_technology"
+                    formatter: number
                 program_percent_precision_production:
                     column: "academics.program_percentage.precision_production"
+                    formatter: number
                 program_percent_transportation:
                     column: "academics.program_percentage.transportation"
+                    formatter: number
                 program_percent_visual_performing:
                     column: "academics.program_percentage.visual_performing"
+                    formatter: number
                 program_percent_health:
                     column: "academics.program_percentage.health"
+                    formatter: number
                 program_percent_business_marketing:
                     column: "academics.program_percentage.business_marketing"
+                    formatter: number
                 program_percent_history:
                     column: "academics.program_percentage.history"
+                    formatter: number
                 student_ethnicity_percent_white:
                     column: "student.demographics.race_ethnicity.white"
+                    formatter: number
                 student_ethnicity_percent_black:
                     column: "student.demographics.race_ethnicity.black"
+                    formatter: number
                 student_ethnicity_percent_hispanic:
                     column: "student.demographics.race_ethnicity.hispanic"
+                    formatter: number
                 student_ethnicity_percent_asian:
                     column: "student.demographics.race_ethnicity.asian"
+                    formatter: number
                 student_ethnicity_percent_aian:
                     column: "student.demographics.race_ethnicity.aian"
+                    formatter: number
                 student_ethnicity_percent_nhpi:
                     column: "student.demographics.race_ethnicity.nhpi"
+                    formatter: number
                 student_ethnicity_percent_two_or_more:
                     column: "student.demographics.race_ethnicity.two_or_more"
+                    formatter: number
                 student_ethnicity_percent_non_resident_alien:
                     column: "student.demographics.race_ethnicity.non_resident_alien"
+                    formatter: number
                 student_ethnicity_percent_unknown:
                     column: "student.demographics.race_ethnicity.unknown"
+                    formatter: number
                 student_ethnicity_percent_white_non_hispanic:
                     column: "student.demographics.race_ethnicity.white_non_hispanic"
+                    formatter: number
                 student_ethnicity_percent_black_non_hispanic:
                     column: "student.demographics.race_ethnicity.black_non_hispanic"
+                    formatter: number
                 student_ethnicity_percent_asian_pacific_islander:
                     column: "student.demographics.race_ethnicity.asian_pacific_islander"
+                    formatter: number
 
 import:
     college_scorecard_2019:
