@@ -94,6 +94,9 @@ class Provider(BaseProvider('source', 'college_scorecard')):
             response = requests.get("{}?{}".format(self.base_url, request_params))
             results = response.json()
 
+            if 'error' in results:
+                self.command.error("Received API error [ {} ] - {}".format(results['error']['code'], results['error']['message']))
+
             if results['metadata']['page'] > results['metadata']['total']:
                 break
 
