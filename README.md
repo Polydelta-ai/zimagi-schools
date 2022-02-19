@@ -249,6 +249,10 @@ api.extend('https://github.com/Polydelta-ai/zimagi-schools.git', 'main',
 # * dot separated strings   "user.list"
 #
 response = api.execute('school.list')
+#
+# OR
+#
+response = api.school__list() # __ converted to /
 
 #
 # Organization SDK interface
