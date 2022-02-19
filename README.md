@@ -149,6 +149,17 @@ zimagi module add \
     https://github.com/Polydelta-ai/zimagi-schools.git \
     reference=main
 
+#
+# College Scorecard requires an API key
+#
+# Go here to register for one: https://api.data.gov/signup/
+#
+# Make sure the following environment variable is available
+# to the Zimagi platform importing school related data
+#
+export ZIMAGI_COLLEGE_SCORECARD_API_KEY="{YOUR API KEY}"
+
+
 # Import data and run derived calculations
 zimagi import --tags=school
 zimagi calculate --tags=school
@@ -221,6 +232,10 @@ api = zimagi.Client(
 )
 
 # Add Zimagi module
+#
+# Make sure your script has access to the ZIMAGI_COLLEGE_SCORECARD_API_KEY
+# environment variable.
+#
 api.extend('https://github.com/Polydelta-ai/zimagi-schools.git', 'main',
     provider = 'git'
 )
