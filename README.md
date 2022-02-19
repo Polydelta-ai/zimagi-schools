@@ -3,7 +3,7 @@
 </p>
 <hr/>
 
-<h1 align="center"><b>University</b> <i>and</i> <b>Educational Institution</b> <i>Data Module</i></h1>
+<h1 align="center"><b>University</b> and <b>Educational Institution</b> <i>Data Module</i></h1>
 <br/>
 
 ## Dependencies
