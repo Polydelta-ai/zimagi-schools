@@ -255,7 +255,7 @@ response = api.execute('school.list')
 response = api.school__list() # __ converted to /
 
 #
-# Organization SDK interface
+# School SDK interface
 #
 
 # Import and run derived calculations for schools
