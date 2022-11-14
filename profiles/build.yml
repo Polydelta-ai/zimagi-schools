@@ -12,7 +12,7 @@ models:
         base: organization
         extend: true
         display: "<name>"
-        priority: 60
+        priority: 70
         fields:
             url:
                 type: url
@@ -27,7 +27,8 @@ models:
         id_fields: [ school_id, year ]
         key: year
         display: "<school__name> (<year>)"
-        priority: 65
+        command_base: "school year"
+        priority: 75
         name_field: false
         fields:
             year:
