@@ -1,13 +1,8 @@
 _college_scorecard_import: &college_scorecard_import
     source: college_scorecard
     data:
-        school:
+        location:
             map:
-                name:
-                    column: "school.name"
-                    validators:
-                        string:
-                            empty: false
                 city:
                     column: "school.city"
                     validators:
@@ -20,6 +15,22 @@ _college_scorecard_import: &college_scorecard_import
                             empty: false
                 zipcode:
                     column: "school.zip"
+                    validators:
+                        string:
+                            empty: false
+        school:
+            requires: [location]
+            relations:
+                location_id:
+                    data: location
+                    required: true
+                    scope:
+                        city: "school.city"
+                        state: "school.state"
+                        zipcode: "school.zip"
+            map:
+                name:
+                    column: "school.name"
                     validators:
                         string:
                             empty: false
