@@ -1,5 +1,8 @@
 name: schools
 
+version: 0.0.1
+compatibility: ">=0.11.0,<0.12"
+
 modules:
     - remote: https://github.com/Polydelta-ai/zimagi-organizations.git
       reference: main
