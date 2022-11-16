@@ -65,6 +65,7 @@ _college_scorecard_import: &college_scorecard_import
                     column: "student.size"
                     validators:
                         number:
+                            min: 1
                     formatter: integer
                 admissions_rate:
                     column: "admissions.admission_rate.overall"
