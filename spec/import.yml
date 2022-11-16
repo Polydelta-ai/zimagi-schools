@@ -56,9 +56,15 @@ _college_scorecard_import: &college_scorecard_import
             map:
                 year:
                     column: year
+                    validators:
+                        number:
+                            min: 2019
+                            max: 2022
                     formatter: integer
                 student_size:
                     column: "student.size"
+                    validators:
+                        number:
                     formatter: integer
                 admissions_rate:
                     column: "admissions.admission_rate.overall"
@@ -229,3 +235,8 @@ import:
         <<: *college_scorecard_import
         tags: [organization, school, 2021]
         year: 2021
+
+    college_scorecard_2022:
+        <<: *college_scorecard_import
+        tags: [organization, school, 2022]
+        year: 2022
