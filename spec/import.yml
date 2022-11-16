@@ -217,5 +217,15 @@ _college_scorecard_import: &college_scorecard_import
 import:
     college_scorecard_2019:
         <<: *college_scorecard_import
-        tags: [organization, school]
+        tags: [organization, school, 2019]
         year: 2019
+
+    college_scorecard_2020:
+        <<: *college_scorecard_import
+        tags: [organization, school, 2020]
+        year: 2020
+
+    college_scorecard_2021:
+        <<: *college_scorecard_import
+        tags: [organization, school, 2021]
+        year: 2021
