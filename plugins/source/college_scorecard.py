@@ -97,7 +97,7 @@ class Provider(BaseProvider('source', 'college_scorecard')):
             if 'error' in results:
                 self.command.error("Received API error [ {} ] - {}".format(results['error']['code'], results['error']['message']))
 
-            if results['metadata']['page'] > results['metadata']['total']:
+            if (results['metadata']['page'] * results['metadata']['per_page']) > results['metadata']['total']:
                 break
 
             for record in results['results']:
