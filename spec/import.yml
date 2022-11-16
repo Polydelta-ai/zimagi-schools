@@ -8,11 +8,15 @@ _college_scorecard_import: &college_scorecard_import
                     validators:
                         string:
                             empty: false
+                    formatter:
+                        provider: capitalize
+                        words: true
                 state:
                     column: "school.state"
                     validators:
                         string:
                             empty: false
+                    formatter: upper
                 zipcode:
                     column: "school.zip"
                     validators:
@@ -25,8 +29,8 @@ _college_scorecard_import: &college_scorecard_import
                     data: location
                     required: true
                     scope:
-                        city: "school.city"
-                        state: "school.state"
+                        city: "#capitalize(school.city, words=true)"
+                        state: "#upper(school.state)"
                         zipcode: "school.zip"
             map:
                 name:
